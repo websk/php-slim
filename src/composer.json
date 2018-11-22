@@ -1,0 +1,14 @@
+{
+  "name": "websk/php-slim",
+  "description": "Slim framework utils",
+  "homepage": "https://websk.ru/",
+  "require": {
+    "slim/slim": "^3.0",
+    "slim/php-view": "^2.2",
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
