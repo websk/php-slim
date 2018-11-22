@@ -1,22 +1,24 @@
 <?php
 
-namespace Websk\Skif;
+namespace Websk\Slim;
+
+use Slim\App;
 
 /**
  * Class Facade
- * @package Websk\Skif
+ * @package Websk\Slim
  */
 class Facade
 {
     /**
      * When you writing the facades extended Facades, you can use "self::$app"
      * to get anything you want.
-     * @var \Slim\App $app slim app instance.
+     * @var App $app slim app instance.
      */
     public static $app;
 
     /**
-     * @param \Slim\App $app
+     * @param App $app
      */
     public static function setFacadeApplication($app)
     {
