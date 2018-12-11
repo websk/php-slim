@@ -1,12 +1,12 @@
 <?php
 
-namespace Websk\Slim;
+namespace WebSK\Slim;
 
 use Slim\App;
 
 /**
  * Class Facade
- * @package Websk\Slim
+ * @package WebSK\Slim
  */
 class Facade
 {

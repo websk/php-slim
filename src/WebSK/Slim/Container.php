@@ -1,12 +1,12 @@
 <?php
 
-namespace Websk\Slim;
+namespace WebSK\Slim;
 
 use Psr\Container\ContainerInterface;
 
 /**
  * Class Container
- * @package Websk\Slim
+ * @package WebSK\Slim
  */
 class Container extends Facade
 {
