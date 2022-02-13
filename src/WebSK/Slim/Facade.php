@@ -15,12 +15,12 @@ class Facade
      * to get anything you want.
      * @var App $app slim app instance.
      */
-    public static $app;
+    public static App $app;
 
     /**
      * @param App $app
      */
-    public static function setFacadeApplication($app)
+    public static function setFacadeApplication(App $app)
     {
         Facade::$app = $app;
     }
@@ -36,7 +36,7 @@ class Facade
      * returned.
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return '';
     }

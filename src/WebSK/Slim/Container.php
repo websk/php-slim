@@ -15,7 +15,7 @@ class Container extends Facade
      * Facades to proxy it.
      * @return ContainerInterface
      */
-    public static function self()
+    public static function self(): ContainerInterface
     {
         return self::$app->getContainer();
     }
