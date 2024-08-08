@@ -3,7 +3,7 @@
 namespace WebSK\Slim\RequestHandlers;
 
 use Psr\Container\ContainerInterface;
-use Slim\Http\Request;
+use Psr\Http\Message\ServerRequestInterface;
 use WebSK\Slim\Router;
 
 /**
@@ -28,17 +28,17 @@ abstract class BaseHandler
      * @param array $queryParams
      * @return string
      */
-    public function pathFor(string $name, array $data = [], array $queryParams = [])
+    public function pathFor(string $name, array $data = [], array $queryParams = []): string
     {
         return Router::pathFor($name, $data, $queryParams);
     }
 
     /**
      * Alternative $_SERVER['REQUEST_URI']
-     * @param Request $request
+     * @param ServerRequestInterface $request
      * @return string
      */
-    public function getRequestUri(Request $request): string
+    public function getRequestUri(ServerRequestInterface $request): string
     {
         $uri = $request->getUri();
         $url_path = $uri->getPath();

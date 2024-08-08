@@ -11,8 +11,6 @@ use Slim\App;
 class Facade
 {
     /**
-     * When you writing the facades extended Facades, you can use "self::$app"
-     * to get anything you want.
      * @var App $app slim app instance.
      */
     public static App $app;
