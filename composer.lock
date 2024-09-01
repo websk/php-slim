@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa0d470cf2d877ffac03a9fe9c8397f6",
+    "content-hash": "2b8e55ce145f924c82379a254bd1b8e6",
     "packages": [
         {
             "name": "nikic/fast-route",
@@ -332,16 +332,16 @@
         },
         {
             "name": "psr/log",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/79dff0b268932c640297f5208d6298f71855c03e",
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e",
                 "shasum": ""
             },
             "require": {
@@ -376,9 +376,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/3.0.0"
+                "source": "https://github.com/php-fig/log/tree/3.0.1"
             },
-            "time": "2021-07-14T16:46:02+00:00"
+            "time": "2024-08-21T13:31:24+00:00"
         },
         {
             "name": "slim/php-view",
@@ -550,6 +550,72 @@
                 }
             ],
             "time": "2024-06-13T08:54:48+00:00"
+        },
+        {
+            "name": "websk/php-config",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websk/php-config.git",
+                "reference": "57f0481617988daffea45ef871f78a09dc58f233"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websk/php-config/zipball/57f0481617988daffea45ef871f78a09dc58f233",
+                "reference": "57f0481617988daffea45ef871f78a09dc58f233",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PHP configs wrapper",
+            "homepage": "https://websk.ru/",
+            "support": {
+                "issues": "https://github.com/websk/php-config/issues",
+                "source": "https://github.com/websk/php-config/tree/2.0.0"
+            },
+            "time": "2024-08-08T07:17:03+00:00"
+        },
+        {
+            "name": "websk/php-utils",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websk/php-utils.git",
+                "reference": "ba0e4ab23f2e91f24769d2c74042e6b993724974"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websk/php-utils/zipball/ba0e4ab23f2e91f24769d2c74042e6b993724974",
+                "reference": "ba0e4ab23f2e91f24769d2c74042e6b993724974",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^8.3",
+                "websk/php-config": "2.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PHP utils",
+            "support": {
+                "issues": "https://github.com/websk/php-utils/issues",
+                "source": "https://github.com/websk/php-utils/tree/2.0.0"
+            },
+            "time": "2024-08-08T07:42:18+00:00"
         }
     ],
     "packages-dev": [],

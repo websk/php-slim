@@ -3,6 +3,7 @@
 namespace WebSK\Slim;
 
 use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
@@ -22,5 +23,19 @@ class Request extends Facade
     protected static function getFacadeAccessor(): string
     {
         return 'request';
+    }
+
+    public static function getParsedBodyParam(ServerRequestInterface $request, string $key, $default = null)
+    {
+        $postParams = $request->getParsedBody();
+        $result = $default;
+
+        if (is_array($postParams) && isset($postParams[$key])) {
+            $result = $postParams[$key];
+        } elseif (is_object($postParams) && property_exists($postParams, $key)) {
+            $result = $postParams->$key;
+        }
+
+        return $result;
     }
 }
