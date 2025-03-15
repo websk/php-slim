@@ -28,9 +28,9 @@ abstract class BaseHandler
      * @param array $queryParams
      * @return string
      */
-    public function pathFor(string $name, array $data = [], array $queryParams = []): string
+    public function urlFor(string $name, array $data = [], array $queryParams = []): string
     {
-        return Router::pathFor($name, $data, $queryParams);
+        return Router::urlFor($name, $data, $queryParams);
     }
 
     /**

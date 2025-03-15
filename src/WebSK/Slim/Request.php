@@ -10,9 +10,7 @@ use Psr\Http\Message\UriInterface;
  * Class Request
  * @package WebSK\Slim
  * @method static UriInterface getUri()
- * @method static mixed getParam($key, $default = null)
  * @method static mixed getAttribute($key, $default = null)
- * @method static mixed getQueryParam($key, $default = null)
  * @see RequestInterface
  */
 class Request extends Facade
@@ -22,7 +20,7 @@ class Request extends Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'request';
+        return ServerRequestInterface::class;
     }
 
     public static function getParsedBodyParam(ServerRequestInterface $request, string $key, $default = null)

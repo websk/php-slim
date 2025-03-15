@@ -18,7 +18,7 @@ class Facade
     /**
      * @param App $app
      */
-    public static function setFacadeApplication(App $app)
+    public static function setFacadeApplication(App $app): void
     {
         Facade::$app = $app;
     }
