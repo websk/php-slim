@@ -45,7 +45,7 @@ class Facade
      * returned.
      * @return mixed
      */
-    public static function self()
+    public static function self(): mixed
     {
         return Facade::$app->getContainer()[static::getFacadeAccessor()];
     }

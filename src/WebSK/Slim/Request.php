@@ -10,7 +10,7 @@ use Psr\Http\Message\UriInterface;
  * Class Request
  * @package WebSK\Slim
  * @method static UriInterface getUri()
- * @method static mixed getAttribute($key, $default = null)
+ * @method static mixed getAttribute(string $name, $default = null)
  * @see RequestInterface
  */
 class Request extends Facade
