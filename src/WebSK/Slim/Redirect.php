@@ -14,7 +14,7 @@ class Redirect
      * @param int $status_code
      * @return ResponseInterface
      */
-    public static function redirect(ResponseInterface $response, $uri, int $status_code = StatusCodeInterface::STATUS_TEMPORARY_REDIRECT): ResponseInterface
+    public static function redirect(ResponseInterface $response, $uri, int $status_code = StatusCodeInterface::STATUS_FOUND): ResponseInterface
     {
         if ($uri instanceof UriInterface) {
             $url = $uri->getPath();
