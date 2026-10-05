@@ -3,6 +3,7 @@
 namespace WebSK\Slim;
 
 use Slim\App;
+use LogicException;
 
 /**
  * Class Facade
@@ -10,20 +11,17 @@ use Slim\App;
  */
 class Facade
 {
-    /**
-     * @var App $app slim app instance.
-     */
+    /** @var App<*> Slim application instance. */
     public static App $app;
 
-    /**
-     * @param App $app
-     */
+    /** @param App<*> $app */
     public static function setFacadeApplication(App $app): void
     {
         Facade::$app = $app;
     }
 
-    public static function __callStatic($method, $args)
+    /** @param array<int, mixed> $args */
+    public static function __callStatic(string $method, array $args): mixed
     {
         return static::self()->$method(...$args);
     }
@@ -47,6 +45,12 @@ class Facade
      */
     public static function self(): mixed
     {
-        return Facade::$app->getContainer()[static::getFacadeAccessor()];
+        $container = Facade::$app->getContainer();
+
+        if ($container === null) {
+            throw new LogicException('The Slim application does not have a container.');
+        }
+
+        return $container->get(static::getFacadeAccessor());
     }
 }

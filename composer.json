@@ -2,16 +2,45 @@
   "name": "websk/php-slim",
   "description": "Slim framework utils",
   "homepage": "https://websk.ru/",
+  "license": "MIT",
   "require": {
     "php": "^8.3",
-    "fig/http-message-util": "1.1.5",
-    "slim/slim": "4.14.*",
-    "slim/psr7": "1.7.0",
-    "slim/http": "1.4.0"
+    "fig/http-message-util": "^1.1",
+    "slim/slim": "^4.15",
+    "slim/psr7": "^1.8",
+    "slim/http": "^1.4"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^12.5"
   },
   "autoload": {
     "psr-4": {
-      "": "src/"
+      "WebSK\\": "src/WebSK/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WebSK\\Slim\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "find src tests -name '*.php' -print0 | xargs -0 -n1 php -l",
+    "test": "php -d error_reporting=E_ALL vendor/bin/phpunit",
+    "phpstan": "php -d error_reporting=E_ALL vendor/bin/phpstan analyse --no-progress --debug",
+    "check": [
+      "@lint",
+      "@test",
+      "@phpstan"
+    ]
+  },
+  "archive": {
+    "exclude": [
+      "/.ai",
+      "/.idea",
+      "/.phpstan-cache",
+      "/.phpunit.cache",
+      "/vendor"
+    ]
   }
 }

@@ -3,6 +3,7 @@
 namespace WebSK\Slim;
 
 use Psr\Container\ContainerInterface;
+use LogicException;
 
 /**
  * Class Container
@@ -17,6 +18,12 @@ class Container extends Facade
      */
     public static function self(): ContainerInterface
     {
-        return self::$app->getContainer();
+        $container = self::$app->getContainer();
+
+        if ($container === null) {
+            throw new LogicException('The Slim application does not have a container.');
+        }
+
+        return $container;
     }
 }

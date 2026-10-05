@@ -1,3 +1,5 @@
 .idea/
 /vendor
 .ai
+/.phpunit.cache/
+/.phpstan-cache/

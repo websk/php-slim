@@ -24,8 +24,8 @@ abstract class BaseHandler
 
     /**
      * @param string $name
-     * @param array $data
-     * @param array $queryParams
+     * @param array<string, string> $data
+     * @param array<string, string|array<array-key, string>> $queryParams
      * @return string
      */
     public function urlFor(string $name, array $data = [], array $queryParams = []): string
@@ -44,6 +44,6 @@ abstract class BaseHandler
         $url_path = $uri->getPath();
         $url_path_explode = explode('/', $url_path);
 
-        return $uri->withPath(implode('/', $url_path_explode));
+        return (string) $uri->withPath(implode('/', $url_path_explode));
     }
 }

@@ -17,7 +17,7 @@ class Response
      */
     public static function responseWithJson(
         ResponseInterface $response,
-        $data,
+        mixed $data,
         ?int $status = null,
         int $options = 0,
         int $depth = 512

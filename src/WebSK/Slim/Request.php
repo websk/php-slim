@@ -23,7 +23,11 @@ class Request extends Facade
         return ServerRequestInterface::class;
     }
 
-    public static function getParsedBodyParam(ServerRequestInterface $request, string $key, $default = null)
+    public static function getParsedBodyParam(
+        ServerRequestInterface $request,
+        string $key,
+        mixed $default = null
+    ): mixed
     {
         $postParams = $request->getParsedBody();
         $result = $default;
